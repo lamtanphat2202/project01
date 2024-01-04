@@ -13,6 +13,18 @@
         />
         <link rel="stylesheet" href="./assets/css/styles.css" />
         <title>Phat Project</title>
+        <style>
+        #movingObject {
+            width: 50px;
+            height: 50px;
+            background-color: #3498db;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: transform 0.3s ease; /* Thêm transition để tạo hiệu ứng mượt mà */
+        }
+    </style>
     </head>
     <body>
         <main style="height: 5000px;"> 
