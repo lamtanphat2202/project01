@@ -27,6 +27,15 @@
     </style>
     </head>
     <body>
+        <a href="#!" id="movingObject" class="btn hero-cta">More About Us</a>
+                        <script>
+    var movingObject = document.getElementById("movingObject");
+
+    document.addEventListener("wheel", function (event) {
+        // Thay đổi vị trí của phần tử dựa trên sự kiện cuộn chuột
+        movingObject.style.transform = "translate(" + event.deltaY + "px, " + event.deltaX + "px)";
+    });
+</script>
         <main style="height: 5000px;"> 
             <!-- HEADER -->
             <header class="header">
@@ -62,15 +71,7 @@
                             </p>
                             
                         </div>
-                        <a href="#!" id="movingObject" class="btn hero-cta">More About Us</a>
-                        <script>
-    var movingObject = document.getElementById("movingObject");
-
-    document.addEventListener("wheel", function (event) {
-        // Thay đổi vị trí của phần tử dựa trên sự kiện cuộn chuột
-        movingObject.style.transform = "translate(" + event.deltaY + "px, " + event.deltaX + "px)";
-    });
-</script>
+                        
 
                         <img
                             src="./assets/css/img/house illustration.svg"
