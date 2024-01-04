@@ -12,7 +12,18 @@
             rel="stylesheet"
         />
         <link rel="stylesheet" href="./assets/css/styles.css" />
-        <title>Document</title>
+        <style>
+        #movingObject {
+            width: 50px;
+            height: 50px;
+            background-color: #3498db;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+        <title>Phat Project</title>
     </head>
     <body>
         <main style="height: 5000px;"> 
@@ -36,6 +47,18 @@
                             <a href="#!" class="btn">Sign up</a>
                         </div>
                     </nav>
+
+                    <div id="movingObject"></div>
+
+<script>
+    var movingObject = document.getElementById("movingObject");
+
+    document.addEventListener("wheel", function (event) {
+        // Thay đổi vị trí của vật thể dựa trên sự kiện cuộn chuột
+        movingObject.style.transform = "translate(-50%, -50%) translate(" + event.deltaX + "px, " + event.deltaY + "px)";
+    });
+</script>
+
 
                     <div class="hero">
                         <div class="info">
